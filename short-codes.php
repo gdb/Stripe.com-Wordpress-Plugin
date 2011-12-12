@@ -4,7 +4,7 @@
 add_shortcode('stripe_payment', 'stripe_payment');	
 function stripe_payment($atts, $content = null ) {
    	extract(shortcode_atts(array(
-      "amount" 		=> 500.0,
+      "amount" 		=> null,
       "payment_id"	=> null
    	), $atts));
       	

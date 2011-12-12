@@ -10,6 +10,7 @@ $(document).ready(function(){
 		dom += '</div>';
 		$('#stripe-payment-wrap').prepend(dom);
 		
+		$('#cardAmount').val('5.00');
 		$('#cardNumber').val('424242424242');
 		$('#cardCvc').val('123');
 		$('#cardName').val('John Doe');
@@ -34,7 +35,8 @@ $(document).ready(function(){
 	});
 	
 	// Initial validation of the amount
-	$('#cardAmount').blur();
+        if ($('#cardAmount').value)
+		$('#cardAmount').blur();
 	
 	// Bind to the submit for the form
     $("#stripe-payment-form").submit(function(event) {
