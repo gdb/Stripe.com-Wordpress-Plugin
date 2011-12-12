@@ -1,3 +1,5 @@
+var $ = jQuery;
+
 $(document).ready(function(){
 	// If the keys are not the 'live' ones
 	if(!isLiveKeys) {
